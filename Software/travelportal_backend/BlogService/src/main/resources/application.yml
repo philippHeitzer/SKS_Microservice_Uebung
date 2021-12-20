@@ -1,5 +1,5 @@
 server:
-  port: 0   # uses random port
+  port: 8088   # uses random port
 
 spring:
   datasource:

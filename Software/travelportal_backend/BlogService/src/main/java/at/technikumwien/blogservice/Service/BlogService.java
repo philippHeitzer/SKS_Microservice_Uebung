@@ -15,6 +15,7 @@ import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Log
@@ -80,9 +81,16 @@ public class BlogService {
     public Blog retrieve(long id) {
         log.info("retrieve() >> id=" + id);
 
-        return blogRepository.findById(id)
-                .orElseThrow(
-                        () -> new EmptyResultDataAccessException("can't find news with id " + id, 1)
-                );
+        if(blogRepository.existsById(id))
+        {
+            //todo notify other services
+
+            return blogRepository.findById(id)
+                    .orElseThrow(
+                            () -> new EmptyResultDataAccessException("can't find blog with id " + id, 1)
+                    );
+        }
+        else return null;
+
     }
 }
