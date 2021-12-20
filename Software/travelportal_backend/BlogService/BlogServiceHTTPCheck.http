@@ -1,8 +1,8 @@
-GET http://localhost:51903/travelportal/blog
+GET http://localhost:64331/travelportal/blog
 
 ###
 
-POST http://localhost:51903/travelportal/blog
+POST http://localhost:64331/travelportal/blog
 Content-Type: application/json
 
 {

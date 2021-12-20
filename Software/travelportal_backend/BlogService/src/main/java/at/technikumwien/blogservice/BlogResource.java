@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value= "/travelportal/blog", method = {RequestMethod.GET, RequestMethod.PUT, RequestMethod.POST, RequestMethod.DELETE})
+@RequestMapping( "/travelportal/blog")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @Log
 public class BlogResource {
