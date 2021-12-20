@@ -1,0 +1,26 @@
+GET http://localhost:51903/travelportal/blog
+
+###
+
+POST http://localhost:51903/travelportal/blog
+Content-Type: application/json
+
+{
+    "id": 1,
+    "title": "Neues vom Schloß Schönbrunn",
+     "blogText": "Das Kindermuseum Schloss Schönbrunn feiert Weihnachten und hat aus diesem Anlass ein buntes Programm für die Kleinen auf die Beine gestellt. Von 13. Dezember bis 9. Jänner warten spannende Highlights wie erlebnisreiche Rätselrallyen, Bastelkurse und wissenswerte Themenführungen, die über traditionelle Weihnachtsbräuche und den kaiserlichen Hof belehren.",
+    "author":
+    {
+      "id": 1,
+      "firstname": "Christian",
+      "lastname": "Pfeffer"
+    },
+    "attraction":
+    {
+      "id": 1,
+      "name": "Schloß Schönbrunn",
+      "description": "Altes und bekanntes Schloß in Wien"
+    }
+}
+
+###
