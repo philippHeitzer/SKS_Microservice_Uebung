@@ -12,6 +12,14 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+
+@NamedEntityGraph(
+        name = "Blog.fetchCategoryAuthors",
+        attributeNodes = {
+                @NamedAttributeNode("author"),
+                @NamedAttributeNode("attraction")
+        }
+)
 public class Blog {
 
     @Id
