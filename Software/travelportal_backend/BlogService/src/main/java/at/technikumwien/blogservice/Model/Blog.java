@@ -45,4 +45,9 @@ public class Blog {
         this(null,title,blogText,author,attraction);
     }
 
+    public Blog(String title,Author author, Attraction attraction)
+    {
+        this(null,title,null, author,attraction);
+    }
+
 }

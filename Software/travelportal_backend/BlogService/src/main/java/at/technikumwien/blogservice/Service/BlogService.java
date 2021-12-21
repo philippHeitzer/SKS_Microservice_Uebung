@@ -8,14 +8,16 @@ import at.technikumwien.blogservice.Repository.AuthorRepository;
 import at.technikumwien.blogservice.Repository.BlogRepository;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.ResponseEntity;
+import org.springframework.messaging.Message;
+import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 
 import java.net.URI;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @Log
@@ -28,6 +30,9 @@ public class BlogService {
 
     @Autowired
     private AuthorRepository authorRepository;
+
+    @Autowired
+    private Source source;
 
 
     public List<Blog> retrieveAllBlogs() {
@@ -83,14 +88,33 @@ public class BlogService {
 
         if(blogRepository.existsById(id))
         {
-            //todo notify other services
 
-            return blogRepository.findById(id)
+            Blog blog= blogRepository.findById(id)
                     .orElseThrow(
                             () -> new EmptyResultDataAccessException("can't find blog with id " + id, 1)
                     );
+
+            String blogText = blog.getBlogText();
+            blog.setBlogText(null);
+
+            notifyServices(blog);
+
+            blog.setBlogText(blogText);
+
+            return blog;
         }
         else return null;
+
+    }
+
+    private void notifyServices(Blog blog) {
+
+        Message<Blog> message = MessageBuilder
+                .withPayload(blog)
+                .build();
+
+        source.output()
+                .send(message);
 
     }
 }
