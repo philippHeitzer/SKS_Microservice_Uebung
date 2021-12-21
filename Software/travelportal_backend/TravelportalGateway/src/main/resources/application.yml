@@ -13,7 +13,18 @@ spring:
           predicates:
             - Path=/travelportal/blog/**
           filters:
-            - RewritePath=/travelportal/blog/(?<segment>.*), $\{segment}
+            - RewritePath=/travelportal/blog(?<segment>.*), $\{segment}
+            - name: Retry
+              args:
+                retries: 3
+                statutes: NOT_FOUND, INTERNAL_SERVER_ERROR
+                methods: DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT, TRACE
+        - id: statsroute
+          uri: lb://STATSSERVICE
+          predicates:
+            - Path=/travelportal/stats/**
+          filters:
+            - RewritePath=/travelportal/stats(?<segment>.*), $\{segment}
             - name: Retry
               args:
                 retries: 3
@@ -25,6 +36,8 @@ spring:
             allowedOrigins: "*"
             allowedHeaders: "*"
             allowedMethods: "*"
+
+
 
 eureka:
   client:

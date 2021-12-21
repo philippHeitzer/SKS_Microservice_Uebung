@@ -8,13 +8,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="BlogService" />
-        <module name="TravelportalGateway" />
         <module name="Registry" />
+        <module name="TravelportalGateway" />
+        <module name="StatsService" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="BlogService" target="11" />
       <module name="Registry" target="11" />
+      <module name="StatsService" target="11" />
       <module name="TravelportalGateway" target="11" />
     </bytecodeTargetLevel>
   </component>
@@ -22,6 +24,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="BlogService" options="-parameters" />
       <module name="Registry" options="-parameters" />
+      <module name="StatsService" options="-parameters" />
       <module name="TravelportalGateway" options="-parameters" />
     </option>
   </component>

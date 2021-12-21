@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BlogService/BlogService.iml" filepath="$PROJECT_DIR$/BlogService/BlogService.iml" />
       <module fileurl="file://$PROJECT_DIR$/Registry/Registry.iml" filepath="$PROJECT_DIR$/Registry/Registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StatsService/StatsService.iml" filepath="$PROJECT_DIR$/StatsService/StatsService.iml" />
       <module fileurl="file://$PROJECT_DIR$/TravelportalGateway/TravelportalGateway.iml" filepath="$PROJECT_DIR$/TravelportalGateway/TravelportalGateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/travelportal_backend.iml" filepath="$PROJECT_DIR$/travelportal_backend.iml" />
     </modules>

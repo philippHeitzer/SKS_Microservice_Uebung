@@ -29,7 +29,10 @@ public class DBInitializer {
         );
 
         List<Attraction> attractions= attractionRepository.saveAll(List.of(
-                new Attraction("Wiener Riesenrad","Riesenrad in Wien")
+                new Attraction("Wiener Riesenrad","Riesenrad in Wien"),
+                new Attraction("Schloss Schönbrunn", "Hauptwohnsitz der Habsburger in der Monarchie"),
+                new Attraction("Schloss Belvedere","Schönes Schloss"),
+                new Attraction("Stadtpark Wien","Grüne Fläche zum Erholen in der Wiener Stadt" )
         ));
 
         Author author = authors.get(0);

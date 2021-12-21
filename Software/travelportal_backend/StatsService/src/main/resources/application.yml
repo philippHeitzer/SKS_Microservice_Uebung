@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/db_blogs?serverTimezone=Europe/Vienna
+    url: jdbc:mysql://localhost:3306/db_stats?serverTimezone=Europe/Vienna
     username: root
     password: admin
   jpa:
@@ -16,7 +16,7 @@ spring:
     show-sql: true
 
   application:
-    name: blogservice
+    name: statsservice
 
 eureka:
   client:
@@ -27,3 +27,4 @@ eureka:
   instance:
     instance-id: ${spring.application.name}:${random.value}
     prefer-ip-address: true
+
