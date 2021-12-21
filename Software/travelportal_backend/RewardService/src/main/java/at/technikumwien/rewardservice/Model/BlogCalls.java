@@ -19,14 +19,14 @@ public class BlogCalls {
     Long id;
 
     @Column(name = "callNumber" ,columnDefinition = "integer default 0")
-    Long calls;
+    Integer calls;
 
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "authorid")
     Author author;
 
 
-    public BlogCalls(Author author, Long calls)
+    public BlogCalls(Author author, Integer calls)
     {
         this(null,calls, author);
     }
