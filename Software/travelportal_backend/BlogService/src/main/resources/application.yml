@@ -18,6 +18,20 @@ spring:
   application:
     name: blogservice
 
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+          auto-add-partitions: true
+      bindings:
+        output:
+          destination: travelportal.consumers
+          content-type: application/json
+          producer:
+            partition-count: 3
+
+
 eureka:
   client:
     #    register-with-eureka: true
@@ -28,15 +42,3 @@ eureka:
     instance-id: ${spring.application.name}:${random.value}
     prefer-ip-address: true
 
-  cloud:
-    stream:
-      kafka:
-        binder:
-          brokers: loacalhost:9092
-          auto-add-partitions: true
-      bindings:
-        output:
-          destination: travelportal.consumers
-          content-type: application/json
-          producer:
-            partition-count: 3

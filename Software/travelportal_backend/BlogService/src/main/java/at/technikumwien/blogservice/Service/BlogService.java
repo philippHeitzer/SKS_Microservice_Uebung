@@ -113,8 +113,9 @@ public class BlogService {
                 .withPayload(blog)
                 .build();
 
-        source.output()
-                .send(message);
+        System.out.println(source.output()
+                .send(message));
 
     }
+
 }

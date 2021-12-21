@@ -9,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping( "/resources/blogs")
@@ -28,10 +27,11 @@ public class BlogResource {
     @GetMapping("/{id}")
     public Object retrieve(@PathVariable Long id){
         Blog blog = blogService.retrieve(id);
-        if(blog == null)
+        if(blog != null)
         {
             return blog;
         }
+        System.out.println("Error!");
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 

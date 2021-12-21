@@ -18,14 +18,4 @@ public class Author {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="firstname", nullable = true, length = 100)
-    private String firstname;
-
-    @Column(name="lastname" , nullable = false ,length = 100)
-    private String lastname;
-
-    public Author(String firstname,String lastname)
-    {
-        this(null, firstname,lastname);
-    }
 }

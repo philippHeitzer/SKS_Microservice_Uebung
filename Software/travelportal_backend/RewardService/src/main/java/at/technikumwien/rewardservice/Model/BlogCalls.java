@@ -7,32 +7,27 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Table(name="blog_calls")
+@Table(name="blogs")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 
-@NamedEntityGraph(
-        name = "blog_calls.fetchAuthors",
-        attributeNodes = {
-                @NamedAttributeNode("author")
-        }
-)
 public class BlogCalls {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
+    @Column(name = "callNumber" ,columnDefinition = "integer default 0")
+    Long calls;
+
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "authorid")
     Author author;
 
-    @Column(name = "calls" ,columnDefinition = "integer default 0")
-    Long calls;
 
     public BlogCalls(Author author, Long calls)
     {
-        this(null,author,calls);
+        this(null,calls, author);
     }
 }

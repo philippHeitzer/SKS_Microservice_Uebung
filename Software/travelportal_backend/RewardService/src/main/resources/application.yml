@@ -18,16 +18,6 @@ spring:
   application:
     name: rewardservice
 
-eureka:
-  client:
-    #    register-with-eureka: true
-    #    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-  instance:
-    instance-id: ${spring.application.name}:${random.value}
-    prefer-ip-address: true
-
   cloud:
     stream:
       kafka:
@@ -40,4 +30,16 @@ eureka:
           group: travelport.consumers.rewards
           consumer:
             concurrency: 3
+
+eureka:
+  client:
+    #    register-with-eureka: true
+    #    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+    prefer-ip-address: true
+
+
 

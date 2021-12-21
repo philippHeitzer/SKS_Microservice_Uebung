@@ -1,6 +1,6 @@
 package at.technikumwien.rewardservice.Service;
 
-import at.technikumwien.rewardservice.Model.Blog;
+import at.technikumwien.rewardservice.Model.BlogIncoming;
 import lombok.extern.java.Log;
 import org.springframework.stereotype.Service;
 import org.springframework.cloud.stream.annotation.StreamListener;
@@ -11,7 +11,7 @@ import org.springframework.cloud.stream.messaging.Sink;
 public class RewardsService {
 
     @StreamListener(Sink.INPUT)
-    public void handleReaderEvent(Blog blog) {
+    public void handleReaderEvent(BlogIncoming blog) {
         log.info("handleReaderEvent() >> recievedBlog=" + blog);
 
     }

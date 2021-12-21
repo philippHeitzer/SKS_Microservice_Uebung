@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="30f54f6c-e579-41b9-9bc7-3dbb32c69565" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Software/travelportal_backend/RewardService/src/main/java/at/technikumwien/rewardservice/Model/Attraction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Software/travelportal_backend/RewardService/src/main/java/at/technikumwien/rewardservice/Model/BlogIncoming.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Software/travelportal_backend/BlogService/BlogServiceHTTPCheck.http" beforeDir="false" afterPath="$PROJECT_DIR$/Software/travelportal_backend/BlogService/BlogServiceHTTPCheck.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Software/travelportal_backend/BlogService/src/main/java/at/technikumwien/blogservice/BlogResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/Software/travelportal_backend/BlogService/src/main/java/at/technikumwien/blogservice/BlogResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Software/travelportal_backend/BlogService/src/main/java/at/technikumwien/blogservice/Service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Software/travelportal_backend/BlogService/src/main/java/at/technikumwien/blogservice/Service/BlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Software/travelportal_backend/RewardService/src/main/java/at/technikumwien/rewardservice/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Software/travelportal_backend/RewardService/src/main/java/at/technikumwien/rewardservice/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Software/travelportal_backend/RewardService/src/main/java/at/technikumwien/rewardservice/Model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/Software/travelportal_backend/RewardService/src/main/java/at/technikumwien/rewardservice/Model/Author.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Software/travelportal_backend/RewardService/src/main/java/at/technikumwien/rewardservice/Model/BlogCalls.java" beforeDir="false" afterPath="$PROJECT_DIR$/Software/travelportal_backend/RewardService/src/main/java/at/technikumwien/rewardservice/Model/BlogCalls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Software/travelportal_backend/RewardService/src/main/java/at/technikumwien/rewardservice/Service/RewardsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Software/travelportal_backend/RewardService/src/main/java/at/technikumwien/rewardservice/Service/RewardsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/kafka/data/kafka/output-0/00000000000000000000.log" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/kafka/data/kafka/output-0/00000000000000000000.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/kafka/data/kafka/recovery-point-offset-checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/kafka/data/kafka/recovery-point-offset-checkpoint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/kafka/data/kafka/replication-offset-checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/kafka/data/kafka/replication-offset-checkpoint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/kafka/data/zookeeper/version-2/log.1" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/kafka/data/zookeeper/version-2/log.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/kafka/logs/controller.log" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/kafka/logs/controller.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/kafka/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/kafka/logs/server.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/kafka/logs/state-change.log" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/kafka/logs/state-change.log" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="22bNl8TURusIu5BPTJOBxXWqQJn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="30f54f6c-e579-41b9-9bc7-3dbb32c69565" name="Changes" comment="" />
+      <created>1640102475321</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640102475321</updated>
+      <workItem from="1640102476902" duration="10000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
