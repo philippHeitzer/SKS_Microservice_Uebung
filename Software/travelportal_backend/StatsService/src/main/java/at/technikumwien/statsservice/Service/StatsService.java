@@ -9,6 +9,7 @@ import org.springframework.cloud.stream.messaging.Sink;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class StatsService {
@@ -32,6 +33,27 @@ public class StatsService {
     @StreamListener(Sink.INPUT)
     public void handleReaderEvent(BlogIncoming blogIncoming) {
 
+        Long attractionId= blogIncoming.getAttraction().getId();
+
+       if(attractionRepository.existsById(attractionId))
+       {
+           Optional<Attraction> attraction = attractionRepository.findById(attractionId);
+           attraction.get().setCountThisMonth(attraction.get().getCountThisMonth()+1);
+           attraction.get().setCountAllTime(attraction.get().getCountAllTime()+1);
+           attractionRepository.save(attraction.get());
+       }
+
     }
 
+    public void resetMonthlyCount() {
+        List<Attraction> attractionList= attractionRepository.findAll();
+        System.out.println(attractionList);
+
+        for(Attraction attraction : attractionList)
+        {
+            attraction.setCountThisMonth(0);
+        }
+
+        attractionRepository.saveAll(attractionList);
+    }
 }

@@ -21,7 +21,7 @@ public class MainApp {
         SpringApplication.run(MainApp.class, args);
     }
 
-    @Scheduled(fixedDelay = 20000) //@Scheduled (cron = 0 15 10? * 6l ")
+    @Scheduled(fixedDelay = 20000) //@Scheduled (cron = 0 15 10? * 6l ") - last friday in month 10:15 am
     public void run() {
         System.out.println();
 

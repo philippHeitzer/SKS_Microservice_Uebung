@@ -19,8 +19,6 @@ public class StatsResource {
     @Autowired
     private StatsService statsService;
 
-
-
     @GetMapping("/{requestedListSize}")
     public List<Attraction> retrieveRequestedListSize(@PathVariable int requestedListSize)
     {

@@ -27,7 +27,7 @@ spring:
         input:
           destination: travelportal.consumers
           content-type: application/json
-          group: travelport.consumers.rewards
+          group: travelport.consumers.stats
           consumer:
             concurrency: 3
 
