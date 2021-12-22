@@ -18,6 +18,7 @@ public class MainApp {
     private RewardsService rewardsService;
 
     public static void main(String[] args) {
+
         SpringApplication.run(MainApp.class, args);
     }
 

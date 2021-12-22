@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BlogService/BlogService.iml" filepath="$PROJECT_DIR$/BlogService/BlogService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ConfigService/ConfigService.iml" filepath="$PROJECT_DIR$/ConfigService/ConfigService.iml" />
       <module fileurl="file://$PROJECT_DIR$/Registry/Registry.iml" filepath="$PROJECT_DIR$/Registry/Registry.iml" />
       <module fileurl="file://$PROJECT_DIR$/RewardService/RewardService.iml" filepath="$PROJECT_DIR$/RewardService/RewardService.iml" />
       <module fileurl="file://$PROJECT_DIR$/StatsService/StatsService.iml" filepath="$PROJECT_DIR$/StatsService/StatsService.iml" />

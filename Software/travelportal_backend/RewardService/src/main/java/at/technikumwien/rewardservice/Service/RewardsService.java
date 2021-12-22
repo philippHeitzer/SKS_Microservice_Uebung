@@ -103,7 +103,8 @@ public class RewardsService {
     {
         for(Long key : authorRewardMap.keySet())
         {
-            System.out.println("Author: " + key + " recieves: " +  authorRewardMap.get(key));
+            System.out.println("Author: " + key + " recieves: " +  (authorRewardMap.get(key)/100.00) + " €");
         }
     }
+
 }

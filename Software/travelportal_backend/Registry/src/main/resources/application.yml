@@ -1,15 +1,13 @@
-server:
-  port: 8761
 
 spring:
   application:
     name: travelportalregistry
+  profiles:
+    active: default   # optional since default
 
-eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: false
-    service-url:
-      defaultZone: http://localhost:8761/eureka   # disables peer replication
-  server:
-    use-read-only-response-cache: false
+  config:
+    import: configserver:http://localhost:8888
+
+encrypt:
+  key: topsecret
+
