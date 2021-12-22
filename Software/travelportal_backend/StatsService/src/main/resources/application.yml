@@ -18,6 +18,19 @@ spring:
   application:
     name: statsservice
 
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        input:
+          destination: travelportal.consumers
+          content-type: application/json
+          group: travelport.consumers.rewards
+          consumer:
+            concurrency: 3
+
 eureka:
   client:
     #    register-with-eureka: true

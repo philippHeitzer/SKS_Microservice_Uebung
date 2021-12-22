@@ -4,6 +4,8 @@ import at.technikumwien.statsservice.Model.Attraction;
 import at.technikumwien.statsservice.Service.StatsService;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.stream.annotation.StreamListener;
+import org.springframework.cloud.stream.messaging.Sink;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,6 +18,7 @@ public class StatsResource {
 
     @Autowired
     private StatsService statsService;
+
 
 
     @GetMapping("/{requestedListSize}")
