@@ -59,23 +59,48 @@ public class RewardsService {
 
     public void rewardAuthors() {
 
-        List<Author> authorList = authorRepository.findAll();
-        List<BlogCalls> blogCallsList= blogCallsRepository.findAll();
+        HashMap<Long, Integer> authorRewardMap= createAuthorRewardMap();
 
+        authorRewardMap=updateRewards(authorRewardMap);
+
+        rewardAuthorsPrint(authorRewardMap);
+    }
+
+    private HashMap<Long, Integer> updateRewards(HashMap<Long, Integer> authorRewardMap) {
+        List<BlogCalls> blogCallsList= blogCallsRepository.findAll();
+        for (BlogCalls blogCalls : blogCallsList) {
+            if(authorRewardMap.containsKey(blogCalls.getAuthor().getId()))
+            {
+                authorRewardMap.put(blogCalls.getAuthor().getId(),
+                        (blogCalls.getCalls().intValue() + authorRewardMap.get(blogCalls.getAuthor().getId()).intValue()));
+
+                updateCallsInDatabase(blogCalls);
+            }
+        }
+        return authorRewardMap;
+    }
+
+    private void updateCallsInDatabase(BlogCalls blogCalls) {
+        blogCalls.setCalls(0);
+        blogCallsRepository.save(blogCalls);
+    }
+
+
+    public HashMap<Long, Integer> createAuthorRewardMap ()
+    {
+        List<Author> authorList = authorRepository.findAll();
         HashMap<Long, Integer> authorRewardMap= new HashMap<>();
+
         for(Author author : authorList)
         {
             authorRewardMap.put(author.getId(),0);
         }
 
-        for (BlogCalls blogCalls : blogCallsList) {
-            if(authorRewardMap.containsKey(blogCalls.getAuthor().getId()))
-            {
-                authorRewardMap.put(blogCalls.getAuthor().getId(),
-                        authorRewardMap.get((blogCalls.getAuthor().getId()) + blogCalls.getCalls()));
-            }
-        }
+        return authorRewardMap;
+    }
 
+    public void rewardAuthorsPrint( HashMap<Long, Integer> authorRewardMap)
+    {
         for(Long key : authorRewardMap.keySet())
         {
             System.out.println("Author: " + key + " recieves: " +  authorRewardMap.get(key));

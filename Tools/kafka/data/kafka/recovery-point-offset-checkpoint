@@ -1,5 +1,5 @@
 0
-55
+53
 __consumer_offsets 13 0
 __consumer_offsets 46 0
 __consumer_offsets 9 0
@@ -35,7 +35,6 @@ __consumer_offsets 23 0
 __consumer_offsets 19 0
 __consumer_offsets 32 0
 travelportal.consumers 0 0
-output 0 0
 __consumer_offsets 28 0
 __consumer_offsets 7 0
 __consumer_offsets 40 0
@@ -49,7 +48,6 @@ __consumer_offsets 22 0
 __consumer_offsets 18 0
 travelportal.consumers 1 0
 __consumer_offsets 31 0
-input 0 0
 __consumer_offsets 27 0
 __consumer_offsets 39 0
 __consumer_offsets 6 0

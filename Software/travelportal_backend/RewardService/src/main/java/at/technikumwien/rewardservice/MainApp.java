@@ -21,7 +21,7 @@ public class MainApp {
         SpringApplication.run(MainApp.class, args);
     }
 
-    @Scheduled(fixedDelay = 5000) //@Scheduled (cron = 0 15 10? * 6l ")
+    @Scheduled(fixedDelay = 20000) //@Scheduled (cron = 0 15 10? * 6l ")
     public void run() {
         System.out.println();
 
