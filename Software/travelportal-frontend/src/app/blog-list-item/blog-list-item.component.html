@@ -1,0 +1,10 @@
+<ng-container *ngIf="blog" >
+  <div class="m-2 mb-4 p-2 border border-secondary rounded shadow bg-white">
+    <div class="h2">
+      {{blog.title}}
+    </div>
+    <div>
+      by {{blog.author.lastname}}  {{blog.author.firstname}}
+    </div>
+</div>
+</ng-container>

@@ -21,7 +21,7 @@ public class MainApp {
         SpringApplication.run(MainApp.class, args);
     }
 
-    @Scheduled(fixedDelay = 20000) //@Scheduled (cron="0 0 0 1 1/1 *") first day in month 0:00
+    @Scheduled(fixedDelay = 100000,initialDelay = 100000) //@Scheduled (cron="0 0 0 1 1/1 *") first day in month 0:00
     public void run() {
         System.out.println("RUN SCHEDULER");
 

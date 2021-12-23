@@ -1,0 +1,8 @@
+<div class="m-5 border rounded bg-light">
+  <ng-container *ngIf="blogs$ | async as blogs">
+    <app-blog-list-item
+    *ngFor="let b of blogs"
+    [blog]="b"
+    [routerLink]="b.id"></app-blog-list-item>
+  </ng-container>
+</div>

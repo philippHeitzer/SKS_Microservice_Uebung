@@ -12,7 +12,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping( "/resources/stats")
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 @Log
 public class StatsResource {
 

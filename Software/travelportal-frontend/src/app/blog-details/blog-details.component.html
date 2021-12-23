@@ -1,0 +1,9 @@
+<div *ngIf="blog" class="container mt-5 border bg-light rounded">
+  <h1 class="m-3">
+    {{blog.title}}
+  </h1>
+  <h3 class="m-3">by {{blog.author.lastname}}  {{blog.author.firstname}}</h3>
+  <div class="m-3">
+    {{blog.blogText}}
+  </div>
+</div>

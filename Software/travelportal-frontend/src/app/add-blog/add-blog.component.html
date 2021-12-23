@@ -1,0 +1,62 @@
+
+<mat-card>
+  <mat-card-header>
+      <mat-card-title>
+          Neuen Blog hinzufügen
+      </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <div class="px-5 pb-5">
+          <form class="pt-3" [formGroup]="blogForm"
+          (ngSubmit)="submit()">
+              <div class="row">
+                  <div class="col-md-6 py-1">
+                      <mat-form-field class="w-100">
+                          <mat-label>Titel des Blogs</mat-label>
+                          <input matInput formControlName="title"/>
+                      </mat-form-field>
+                  </div>
+
+                  <div class="col-md-6 py-1">
+                      <mat-form-field class="w-100">
+                          <mat-label>Author</mat-label>
+                          <mat-select formControlName="author">
+                            <mat-option value="Philipp Heitzer" selected>Philipp Heitzer</mat-option>
+                            <mat-option value="Christian Pfeffer">Christian Pfeffer</mat-option>
+                          </mat-select>
+                      </mat-form-field>
+                  </div>
+                  <div class="col-md-6 py-1">
+                      <mat-form-field class="w-100">
+                          <mat-label>Blogtext</mat-label>
+                          <textarea matInput formControlName="blogText"></textarea>
+                      </mat-form-field>
+                  </div>
+
+
+                  <div class="col-md-6 py-1">
+                    <mat-form-field class="w-100">
+                        <mat-label>Beschriebene Sehenswürdigkeit</mat-label>
+                        <mat-select formControlName="attraction">
+                          <mat-option value="Wiener Riesenrad" selected>Wiener Riesenrad</mat-option>
+                          <mat-option value="Schloss Schönbrunn">Schloss Schönbrunn</mat-option>
+                          <mat-option value="Schloss Belvedere">Schloss Belvedere</mat-option>
+                          <mat-option value="Stadtpark Wien">Stadtpark Wien</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                  <div mat-error *ngIf="error">Ein Fehler ist aufgetreten!</div>
+
+                  <mat-card-actions>
+                      <button type="submit" id="submitBtn"
+                       mat-stroked-button
+                       [disabled]="blogForm.invalid"
+                       >Speichern</button>
+                  </mat-card-actions>
+              </div>
+          </form>
+      </div>
+  </mat-card-content>
+
+</mat-card>
