@@ -41,6 +41,10 @@ public class BlogService {
 
     public ResponseEntity<?> createNewBlog(Blog blog) {
 
+        if(!checkBlog(blog))
+        {
+            return ResponseEntity.badRequest().build();
+        }
 
         blog.setId(null);
 
@@ -55,6 +59,29 @@ public class BlogService {
         ).toUri();
 
         return ResponseEntity.created(location).build();
+    }
+
+    private boolean checkBlog(Blog blog) {
+
+        if(blog.getTitle()==null || blog.getTitle().equals(""))
+        {
+            return false;
+        }
+        if(((blog.getAuthor().getLastname() ==null) || (blog.getAuthor().getLastname().equals(""))) && ((blog.getAuthor().getFirstname()==null)|| blog.getAuthor().getFirstname().equals(""))) {
+            return false;
+        }
+
+        if(blog.getAuthor().getLastname() == null || blog.getAuthor().getLastname().equals(""))
+        {
+            return false;
+        }
+
+        if(blog.getAttraction().getName() == null || blog.getAttraction().getName().equals(""))
+        {
+            return false;
+        }
+
+        return true;
     }
 
     private Attraction checkAttraction(Attraction attraction) {
